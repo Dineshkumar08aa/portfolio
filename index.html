@@ -1,106 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dineshkumar A - Portfolio</title>
-  <link rel="stylesheet" href="my.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dineshkumar A | Full Stack Java Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#e2e8f0;
+    scroll-behavior:smooth;
+}
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+}
+
+header h1{
+    font-size:3rem;
+    font-weight:700;
+}
+
+header h2{
+    margin-top:10px;
+    font-weight:400;
+    color:#38bdf8;
+}
+
+header p{
+    max-width:750px;
+    margin-top:20px;
+    font-size:1rem;
+    line-height:1.7;
+    color:#cbd5e1;
+}
+
+.social-links{
+    margin-top:25px;
+}
+
+.social-links a{
+    text-decoration:none;
+    margin:0 15px;
+    color:#38bdf8;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    color:white;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:40px;
+    border-left:5px solid #38bdf8;
+    padding-left:15px;
+}
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+    background:#334155;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:30px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    background:#334155;
+}
+
+.project-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.project-card a{
+    text-decoration:none;
+    color:#38bdf8;
+    font-weight:600;
+}
+
+.cert-list li{
+    margin-bottom:15px;
+}
+
+.cert-list a{
+    text-decoration:none;
+    color:#38bdf8;
+    font-weight:500;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e293b;
+    margin-top:40px;
+}
+
+.fade-in{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 0.8s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2.2rem;
+    }
+}
+</style>
 </head>
+
 <body>
-  <header>
+
+<header>
     <h1>Dineshkumar A</h1>
-    <p>Web Developer | Java Programmer | Problem Solver</p>
-    <p class="location">📌 Kumbakonam</p>
-    <div class="contact">
-      <a href="mailto:dineshadk2004@gmail.com">dineshadk2004@gmail.com</a> |
-      <a href="tel:‪+916383776957‬">‪+91 6383776957‬</a> |
-      <a href="https://www.linkedin.com/in/dineshkumar-a-0a653a315" target="_blank">LinkedIn</a>
-    </div>
-    <div class="resume-button">
-      <a href="https://drive.google.com/file/d/1Sn1WjvHH-vtzCv8qz94ugbpiK4jg2otM/view?usp=drivesdk" target="_blank">
-        <button>📄 Download Resume</button>
-      </a>
-    </div>
-  </header>
-
-  <section class="about">
-    <h2>About Me</h2>
+    <h2>Full Stack Java Developer</h2>
     <p>
-      I'm a motivated ECE graduate with hands-on experience in building responsive web applications. I specialize in Java, Python, MySQL, HTML, CSS and Javascript, with a keen interest in problem solving.
+        Motivated and detail-oriented ECE graduate with hands-on experience in designing and developing scalable web applications using Java technologies. 
+        Proficient in building end-to-end full stack solutions with strong knowledge of backend development, database management, and frontend integration. 
+        Passionate about clean code, SDLC practices, and problem-solving to deliver efficient and maintainable software systems.
     </p>
-  </section>
 
-  <section class="education">
-  <h2>Education</h2>
+    <div class="social-links">
+        <a href="mailto:dineshadk2004@gmail.com">Email</a>
+        <a href="tel:+916383776957">Contact</a>
+        <a href="https://www.linkedin.com/in/dineshkumar-a-0a653a315" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Dineshkumar08aa" target="_blank">GitHub</a>
+    </div>
+</header>
 
-  <div class="edu-item">
-    <h3>B.Tech. in Electronics and Communication Engineering</h3>
-    <p>Sastra Deemed University, Kumbakonam, Tamil Nadu</p>
-    <p class="edu-details">2021 – 2025 | CGPA: 7.50</p>
-  </div>
-
-  <div class="edu-item">
-    <h3>HSC – Computer Science</h3>
-    <p>Sri Matha Matriculation Hr. Sec. School, Kumbakonam</p>
-    <p class="edu-details">2020 – 2021 | Score: 91.96%</p>
-  </div>
-
-  <div class="edu-item">
-    <h3>SSLC</h3>
-    <p>Sri Matha Matriculation Hr. Sec. School, Kumbakonam</p>
-    <p class="edu-details">2018 – 2019 | Score: 90%</p>
-  </div>
+<section class="fade-in">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">Java</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">MySQL</div>
+        <div class="skill-card">Git</div>
+        <div class="skill-card">SDLC</div>
+    </div>
 </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Java</li>
-      <li>Python</li>
-      <li>HTML & CSS</li>
-      <li>MySQL</li>
-      <li>JavaScript</li>
-      <li>Git(Version control)</li>
-    </ul>
-  </section>
+<section class="fade-in">
+    <h2 class="section-title">Projects</h2>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    
-    <div class="project">
-      <h3>🌤 Weather App</h3>
-      <p>
-        A responsive weather application that fetches real-time weather data using OpenWeatherMap API. Built using HTML, CSS, and JavaScript. Displays weather details based on city input with time and date.
-      </p>
-      <a href="https://dineshkumar08aa.github.io/Project1/" target="_blank">Live Demo</a> |
-      <a href="https://github.com/dineshkumar08aa/Project1" target="_blank">GitHub Repo</a>
+    <div class="project-card">
+        <h3>Weather Application</h3>
+        <p>
+            <strong>Objective:</strong> To build a responsive weather forecasting application that fetches real-time weather data using OpenWeatherMap API. 
+            The application allows users to search for any city and view live weather conditions including temperature, humidity, and time-based updates.
+            Built using HTML, CSS, and JavaScript.
+        </p>
+        <br>
+        <a href="https://dineshkumar08aa.github.io/Project1/" target="_blank">Live Project</a>
     </div>
-  </section>
 
-  <section class="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>
-        <a href="https://drive.google.com/file/d/1RI1cEje2FMjusOY5nF7j7tK_SxsWp0IU/view?usp=drivesdk" target="_blank">
-          Complete Java Programming Bootcamp - Udemy
-        </a>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1RLAeMCW0PDZD2Slu9GLskjS0K0QhFI5j/view?usp=drivesdk" target="_blank">
-          SQL - The Complete Introduction to SQL Programming - Udemy
-        </a>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1RMpKbN22ixdAGuzTMKxw0OlL49YJcLYq/view?usp=drivesdk" target="_blank">
-          Become HTML Hero - Udemy
-        </a>
-      </li>
+    <div class="project-card">
+        <h3>Employee Management System</h3>
+        <p>
+            <strong>Objective:</strong> Developed a dynamic web-based Employee Management System to perform CRUD operations. 
+            Implemented using Java, JDBC, JSP, MySQL, and deployed on Apache Tomcat. 
+            Designed responsive UI with HTML and CSS. 
+            The system manages employee records efficiently with secure database connectivity.
+        </p>
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2 class="section-title">Certifications</h2>
+    <ul class="cert-list">
+        <li>
+            <a href="https://drive.google.com/file/d/1RI1cEje2FMjusOY5nF7j7tK_SxsWp0IU/view?usp=drivesdk" target="_blank">
+                Complete Java Programming Bootcamp: Learn to code in Java
+            </a>
+        </li>
+        <li>
+            <a href="https://drive.google.com/file/d/1RLAeMCW0PDZD2Slu9GLskjS0K0QhFI5j/view?usp=drivesdk" target="_blank">
+                SQL - The Complete Introduction to SQL Programming
+            </a>
+        </li>
+        <li>
+            <a href="https://drive.google.com/file/d/1RMpKbN22ixdAGuzTMKxw0OlL49YJcLYq/view?usp=drivesdk" target="_blank">
+                Become HTML Hero
+            </a>
+        </li>
     </ul>
-  </section>
+</section>
 
-  <footer>
-    <p>Thank you for visiting</p>
-  </footer>
+<footer>
+    © 2026 Dineshkumar A | Full Stack Java Developer
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    faders.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom){
+            section.classList.add('show');
+        }
+    });
+});
+</script>
+
 </body>
 </html>
 
